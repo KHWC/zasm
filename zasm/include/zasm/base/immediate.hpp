@@ -62,15 +62,15 @@ namespace zasm
 
         constexpr BitSize getBitSize() const noexcept
         {
-            if (math::abs(s) > std::numeric_limits<std::uint32_t>::max())
+            if (math::abs(s) > 4294967295)
             {
                 return BitSize::_64;
             }
-            if (math::abs(s) > std::numeric_limits<std::uint16_t>::max())
+            if (math::abs(s) > 65535)
             {
                 return BitSize::_32;
             }
-            if (math::abs(s) > std::numeric_limits<std::uint8_t>::max())
+            if (math::abs(s) > 255)
             {
                 return BitSize::_16;
             }

@@ -32,7 +32,7 @@ namespace zasm
     public:
         enum class Id : uint32_t
         {
-            Invalid = std::numeric_limits<uint32_t>::max(),
+            Invalid = 4294967295,
         };
 
     protected:
